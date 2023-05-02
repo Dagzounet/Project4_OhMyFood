@@ -1,15 +1,11 @@
-.container {
+.intro {
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     text-align: center;
-    background-color:#F7F7F7;
+    background-color:$F7;
     padding: 1em 3em 3em 3em;
-
-    h1 {
-        font-size:1.5em;
-    }
 
     p {
         font-size:1.02em;
@@ -28,5 +24,57 @@
     color: white;
     height: 50px;
     width: 78%;
+    }
+}
+
+.Fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 0px;
+    h1 {
+        position: relative;
+        right: 72px;
+    }
+    .fa-1, .fa-2, .fa-3 {
+        border: solid 2px $MainColor;
+        border-radius: 50%;
+        padding: 2px 6px;
+        background-color: $MainColor;
+        color: $F7;
+        position: relative;
+        right: 12px;
+    }
+    .fa-mobile-screen-button {
+        color: #7E7E7E;
+        font-size: 19px;
+        margin: 0px 20px;
+    }
+    .fa-list-ul {
+        color: #7E7E7E;
+        font-size: 19px;
+        margin: 0px 20px;
+    }
+    .fa-store {
+        color: $MainColor;
+        font-size: 19px;
+        margin: 0px 20px;
+    }
+    .card {
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        padding: 24px 0px;
+        margin: 18px 0px;
+        background-color: $F7;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        width: 322px;
+        font-style: normal;
+        font-family: "Roboto";
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
     }
 }
