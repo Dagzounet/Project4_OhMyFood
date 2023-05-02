@@ -16,14 +16,31 @@
   justify-content: center;
   align-items: center;
   height: 50px;
+  gap: 17px;
   background-color: #EAEAEA;
 }
 .header_location i {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-style: normal;
-  margin-right: 10px;
 }
 .header_location p {
+  font-family: "Roboto";
   text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F7F7F7;
+  padding: 1em 3em 3em 3em;
+}
+.container h1 {
+  font-size: 1.5em;
+}
+.container p {
+  font-size: 1.1em;
 }/*# sourceMappingURL=style.css.map */

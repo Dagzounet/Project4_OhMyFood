@@ -1,3 +1,6 @@
+$MainColor:#9356DC;
+$SecondaryColor:#FF79DA;
+$ThirdColor:#99E2D0;
 $Grey:#EAEAEA;
 
 .header_logo {
@@ -18,14 +21,33 @@ $Grey:#EAEAEA;
     justify-content:center;
     align-items: center;
     height: 50px;
+    gap:17px;
     background-color: $Grey;
     i {
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         font-style: normal;
-        margin-right:10px;
     }
     p {
+        font-family: 'Roboto';
         text-align: center;
+    }
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background-color:#F7F7F7;
+    padding: 1em 3em 3em 3em;
+
+    h1 {
+        font-size:1.5em;
+    }
+
+    p {
+        font-size:1.1em;
     }
 }
