@@ -34,7 +34,7 @@
     padding: 28px 0px;
     h1 {
         position: relative;
-        right: 72px;
+        right: 84px;
     }
     .fa-1, .fa-2, .fa-3 {
         border: solid 2px $MainColor;
@@ -65,6 +65,7 @@
         border-radius: 20px;
         padding: 24px 0px;
         margin: 18px 0px;
+        width: 86%;
         background-color: $F7;
     }
     a {
@@ -77,4 +78,57 @@
         font-weight: 500;
         color: black;
     }
+}
+
+.Restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 0px;
+    background-color: $F7;
+    h1 {
+        position: relative;
+        right: 103px;
+    }
+    h2 {
+        padding: 7px 13px;
+        font-size: 18px;
+        margin: 0;
+    }
+    p {
+        padding: 5px 13px;
+        font-size: 17px;
+        margin: 0;
+    }
+    a {
+        font-family: "Roboto";
+        text-decoration: none;
+        color: black;
+    }
+    .card {
+        border-radius: 20px;
+        padding: 0px 0px 18px 0px;
+        margin: 18px 0px;
+        width: 91%;
+        height: 233px;
+        background-color: white;
+    }
+    img {
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        height: 179px;
+        object-fit: cover;
+    }
+    span {
+        border-radius: 2px;
+        padding: 6.5px 12.5px;
+        background-color: #99E2D0;
+        color: green;
+        position: relative;
+        bottom: 100%;
+        left: 71%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
 }
