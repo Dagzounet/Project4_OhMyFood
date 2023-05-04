@@ -365,6 +365,18 @@ i {
   text-align: center;
 }
 
+footer {
+  background-color: #353535;
+  padding: 2px 0px;
+}
+footer h1 {
+  color: #FFFFFF;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 22px 25px;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -493,7 +505,15 @@ i {
   color: green;
   position: relative;
   bottom: 100%;
-  left: 71%;
+  left: 65%;
   font-size: 14px;
   font-weight: 500;
+}
+.Restaurants .fa-heart {
+  left: 88%;
+  bottom: 21%;
+  font-size: 22px;
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin;
 }/*# sourceMappingURL=style.css.map */

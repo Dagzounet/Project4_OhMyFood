@@ -126,9 +126,16 @@
         color: green;
         position: relative;
         bottom: 100%;
-        left: 71%;
+        left: 65%;
         font-size: 14px;
         font-weight: 500;
     }
-    
+    .fa-heart {
+        left: 88%;
+        bottom: 21%;
+        font-size: 22px;
+        position: relative;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: thin;
+}
 }
