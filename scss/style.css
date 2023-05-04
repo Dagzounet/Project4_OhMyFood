@@ -376,6 +376,12 @@ footer h1 {
   font-size: 18px;
   padding: 22px 25px;
 }
+footer ul {
+  list-style: none;
+  color: white;
+  -webkit-padding-start: 25px;
+          padding-inline-start: 25px;
+}
 
 .intro {
   display: flex;
