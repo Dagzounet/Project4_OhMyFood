@@ -4,17 +4,30 @@
 footer {
     background-color: #353535;
     padding: 2px 0px;
-
 h1 {
     color:#FFFFFF;
     font-family: Shrikhand;
     font-weight: 400;
     font-size: 18px;
-    padding: 22px 25px;
+    padding: 12px 25px;
 }
 ul {
     list-style:none;
     color:white;
     padding-inline-start: 25px;
+}
+li {
+    padding-bottom: 10px;
+}
+.fa-utensils {
+    margin-right: 18px;
+    font-size: 13px;
+}
+.fa-handshake-angle {
+    margin-right: 12px;
+    font-size: 15px;
+}
+span {
+    FONT-WEIGHT: 500;
 }
 }
