@@ -25,6 +25,10 @@
     height: 50px;
     width: 78%;
     }
+    a:hover {
+        filter: brightness(105%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
 }
 
 .Fonctionnement {
@@ -64,20 +68,25 @@
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         padding: 24px 0px;
-        margin: 18px 0px;
-        width: 86%;
+        width: 100%;
         background-color: $F7;
     }
     a {
         display: flex;
         align-items: center;
-        width: 322px;
+        width: 86%;
         font-style: normal;
+        border-radius: 20px;
         font-family: "Roboto";
         text-decoration: none;
         font-weight: 500;
         color: black;
+        margin-top: 35px;
     }
+    a:hover {
+        filter: brightness(102%);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+      }
 }
 
 .Restaurants {
