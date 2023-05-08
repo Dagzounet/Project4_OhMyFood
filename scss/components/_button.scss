@@ -1,3 +1,35 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.Restaurants {
+.hidden-checkbox {
+    display: none;
+  }
+  
+  /* Styles de base pour le coeur */
+  .fa-heart {
+    display: flex;
+    justify-content: flex-end;
+    bottom: 19%;
+    right: 27px;
+    font-size: 22px;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: thin;
+  }
+  
+  /* Ajout de l'animation pour remplir le coeur */
+  @keyframes fill-heart {
+    0% {
+      -webkit-text-fill-color: transparent;
+    }
+    100% {
+      -webkit-text-fill-color: violet;
+    }
+  }
+  
+  /* Applique l'animation lorsque la checkbox est cochée */
+  input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
+    animation: fill-heart 1s forwards;
+}
+}
