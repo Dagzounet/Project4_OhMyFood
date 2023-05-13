@@ -436,18 +436,32 @@ footer a {
 @keyframes fill-heart {
   0% {
     -webkit-text-fill-color: transparent;
+    opacity: 0.2;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 800ms;
+  }
+  25% {
+    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
+    transform: opacity(0.2);
   }
   50% {
-    -webkit-text-fill-color: violet;
-    transform: scale(1.2);
+    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
+    transform: opacity(0.6);
+  }
+  75% {
+    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
+    transform: opacity(0.8);
   }
   100% {
-    -webkit-text-fill-color: violet;
-    transform: scale(1);
+    -webkit-text-fill-color: #FF79DA;
+    transform: opacity(1);
   }
 }
 .Restaurants input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart {
-  animation: fill-heart 1s forwards;
+  animation: fill-heart 2s forwards;
 }
 
 .intro {
