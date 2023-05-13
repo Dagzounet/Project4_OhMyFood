@@ -5,9 +5,17 @@
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     padding:9px;
-    background-color: purple;
     img {
         width:162px;
         padding:8px;
+    }
+    a {
+        position: relative;
+        right: 17%;
+    }
+}
+.page1_img {
+    img {
+    width: 100%;
     }
 }
