@@ -501,11 +501,12 @@ footer a {
   flex-direction: column;
   align-items: center;
   padding: 48px 0px;
+  position: relative;
 }
 .Fonctionnement h1 {
   position: absolute;
   left: 5%;
-  bottom: 57%;
+  bottom: 83%;
 }
 .Fonctionnement .fa-1, .Fonctionnement .fa-2, .Fonctionnement .fa-3 {
   border: solid 2px #9356DC;
@@ -561,10 +562,11 @@ footer a {
   align-items: center;
   padding: 55px 0px 29px 0px;
   background-color: #F7F7F7;
+  position: relative;
 }
 .Restaurants h1 {
   position: absolute;
-  bottom: 18%;
+  bottom: 95%;
   left: 5%;
 }
 .Restaurants h2 {
@@ -646,6 +648,9 @@ footer a {
   .Restaurants .card {
     width: calc(48% - 36px);
   }
+  .Restaurants h1 {
+    bottom: 91%;
+  }
 }
 /* Desktop (1024px)*/
 @media (min-width: 1024px) {
@@ -662,6 +667,9 @@ footer a {
   .Fonctionnement a {
     width: 31%;
   }
+  .Fonctionnement h1 {
+    bottom: 64%;
+  }
   .Restaurants {
     gap: 15px 50px;
   }
@@ -669,7 +677,7 @@ footer a {
     width: calc(46% - 36px);
   }
   .Restaurants h1 {
-    bottom: 38%;
+    bottom: 91%;
   }
 }
 /* Desktop (1440px)*/
@@ -680,7 +688,16 @@ footer a {
     justify-content: space-around;
     padding: 48px 45px 48px 53px;
   }
-  .Restaurants h1 {
-    bottom: 38%;
-  }
+}
+.header_logo_page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 9px;
+  background-color: purple;
+}
+.header_logo_page1 img {
+  width: 162px;
+  padding: 8px;
 }/*# sourceMappingURL=style.css.map */
