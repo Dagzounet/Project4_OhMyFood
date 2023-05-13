@@ -402,6 +402,19 @@ footer a {
   color: #F7F7F7;
 }
 
+/* Desktop (1024px)*/
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding-top: 10px;
+  }
+}
 .Restaurants {
   /* Style de base pour le coeur */
   /* Animation pour remplir le coeur */
@@ -617,7 +630,7 @@ footer a {
     gap: 25px;
   }
   .Restaurants .card {
-    width: calc(48% - 36px); /* 36px = 18px (margin) * 2 */
+    width: calc(48% - 36px);
   }
 }
 /* Desktop (1024px)*/
@@ -634,6 +647,12 @@ footer a {
   }
   .Fonctionnement a {
     width: 31%;
+  }
+  .Restaurants {
+    gap: 15px 50px;
+  }
+  .Restaurants .card {
+    width: calc(46% - 36px);
   }
   .Restaurants h1 {
     bottom: 38%;

@@ -35,3 +35,18 @@ a {
     color: $F7;
 }
 }
+
+/* Desktop (1024px)*/
+@media (min-width: 1024px) { 
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap:25px;
+            padding-top:10px;
+        }
+    }
+
+}

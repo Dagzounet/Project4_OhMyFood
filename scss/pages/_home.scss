@@ -177,7 +177,7 @@
         justify-content: center;
         gap:25px;
         .card {
-            width: calc(48% - 36px); /* 36px = 18px (margin) * 2 */
+            width: calc(48% - 36px);
         }
     }
 }
@@ -198,6 +198,10 @@
         }
     }
     .Restaurants {
+        gap: 15px 50px;
+        .card {
+            width: calc(46% - 36px);
+        }
         h1 {
             bottom: 38%;
         }
