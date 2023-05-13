@@ -403,9 +403,9 @@ footer a {
 }
 
 .Restaurants {
-  /* Styles de base pour le coeur */
-  /* Ajout de l'animation pour remplir le coeur */
-  /* Applique l'animation lorsque la checkbox est cochée */
+  /* Style de base pour le coeur */
+  /* Animation pour remplir le coeur */
+  /* Animation lorsque la checkbox est cochée */
 }
 .Restaurants .hidden-checkbox {
   display: none;
@@ -424,8 +424,13 @@ footer a {
   0% {
     -webkit-text-fill-color: transparent;
   }
+  50% {
+    -webkit-text-fill-color: violet;
+    transform: scale(1.2);
+  }
   100% {
     -webkit-text-fill-color: violet;
+    transform: scale(1);
   }
 }
 .Restaurants input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart {
@@ -439,7 +444,8 @@ footer a {
   align-items: center;
   text-align: center;
   background-color: #F7F7F7;
-  padding: 1em 3em 3em 3em;
+  padding: 1em 3em 1em 3em;
+  height: 242px;
 }
 .intro p {
   font-size: 1.02em;
@@ -456,7 +462,7 @@ footer a {
   text-decoration: none;
   color: white;
   height: 50px;
-  width: 78%;
+  width: 218px;
 }
 .intro a:hover {
   filter: brightness(105%);
@@ -467,11 +473,12 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 0px;
+  padding: 48px 0px;
 }
 .Fonctionnement h1 {
-  position: relative;
-  right: 84px;
+  position: absolute;
+  left: 5%;
+  bottom: 57%;
 }
 .Fonctionnement .fa-1, .Fonctionnement .fa-2, .Fonctionnement .fa-3 {
   border: solid 2px #9356DC;
@@ -525,12 +532,13 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 0px;
+  padding: 55px 0px 29px 0px;
   background-color: #F7F7F7;
 }
 .Restaurants h1 {
-  position: relative;
-  right: 103px;
+  position: absolute;
+  bottom: 18%;
+  left: 5%;
 }
 .Restaurants h2 {
   padding: 7px 13px;
@@ -598,4 +606,48 @@ footer a {
   height: fit-content;
   border: none;
   margin-right: 20px;
+}
+
+/* Tablet (768px)*/
+@media (min-width: 768px) {
+  .Restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  .Restaurants .card {
+    width: calc(48% - 36px); /* 36px = 18px (margin) * 2 */
+  }
+}
+/* Desktop (1024px)*/
+@media (min-width: 1024px) {
+  .Fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0px;
+    padding: 48px 25px 48px 53px;
+  }
+  .Fonctionnement .card {
+    width: 100%;
+  }
+  .Fonctionnement a {
+    width: 31%;
+  }
+  .Restaurants h1 {
+    bottom: 38%;
+  }
+}
+/* Desktop (1440px)*/
+@media (min-width: 1440px) {
+  .Fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 48px 45px 48px 53px;
+  }
+  .Restaurants h1 {
+    bottom: 38%;
+  }
 }/*# sourceMappingURL=style.css.map */

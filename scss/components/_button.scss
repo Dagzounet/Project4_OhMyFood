@@ -6,7 +6,7 @@
     display: none;
   }
   
-  /* Styles de base pour le coeur */
+  /* Style de base pour le coeur */
   .fa-heart {
     display: flex;
     justify-content: flex-end;
@@ -18,17 +18,21 @@
     -webkit-text-stroke: thin;
   }
   
-  /* Ajout de l'animation pour remplir le coeur */
+  /* Animation pour remplir le coeur */
   @keyframes fill-heart {
     0% {
       -webkit-text-fill-color: transparent;
     }
+    50% {
+      -webkit-text-fill-color: violet;
+      transform: scale(1.2);
+    }
     100% {
       -webkit-text-fill-color: violet;
-    }
+      transform: scale(1);
   }
-  
-  /* Applique l'animation lorsque la checkbox est cochée */
+}
+  /* Animation lorsque la checkbox est cochée */
   input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
     animation: fill-heart 1s forwards;
 }
