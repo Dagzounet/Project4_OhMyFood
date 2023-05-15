@@ -46,6 +46,7 @@
         font-weight: 400;
         font-size: 28px;
         margin-top: 0;
+        margin-bottom: 0;
     }
     h2 {
         font-family: 'Roboto';
@@ -53,8 +54,9 @@
         font-weight: 300;
         font-size: 16px;
         padding-bottom: 13px;
+        padding-top: 27px;
         span {
-            border-bottom: 4px solid #99E2D0;
+            border-bottom: 4px solid $ThirdColor;
             padding-bottom: 5px;
         }
     }
@@ -107,7 +109,7 @@
         align-items: center;
         text-align: center;
         background-color:$F7;
-        padding: 1em 3em 1em 3em;
+        padding: 2em 3em 1em 3em;
         a {
             display: flex;
             justify-content: center;
