@@ -446,6 +446,52 @@ footer a {
   animation: fill-heart 2s forwards;
 }
 
+.check_container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 73px;
+  left: 80px;
+  height: 76px;
+  transition: left 0.5s ease-in; /* effet d'animation sur la transition left */
+}
+
+.page1_card p {
+  /* Fonction ellipsis */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* largeur maxi avant déclenchement de l'ellipsis */
+  max-width: 88%;
+}
+
+.page1_card:hover p {
+  /* largeur maxi avant déclenchement de l'ellipsis */
+  max-width: 66%;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  position: relative;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.fa-check {
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.page1_card:hover .check_container {
+  left: 17px;
+}
+
 /* Défini les keyframes pour leur donner une valeur de départ et une valeur d'arrivée */
 @keyframes fadeIn {
   0% {
@@ -777,6 +823,7 @@ footer a {
   width: 100%;
   height: 75px;
   background-color: white;
+  overflow: hidden;
 }
 .page1_content a {
   display: flex;
@@ -794,7 +841,8 @@ footer a {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  bottom: 34px;
+  top: 40px;
+  right: 20px;
   font-family: "Roboto";
   font-weight: 500;
 }
