@@ -434,34 +434,44 @@ footer a {
   -webkit-text-stroke: thin;
 }
 @keyframes fill-heart {
-  0% {
-    -webkit-text-fill-color: transparent;
-    opacity: 0.2;
+  100% {
+    opacity: 0.8;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
     transition: all 800ms;
-  }
-  25% {
-    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-    transform: opacity(0.2);
-  }
-  50% {
-    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-    transform: opacity(0.6);
-  }
-  75% {
-    -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-    transform: opacity(0.8);
-  }
-  100% {
-    -webkit-text-fill-color: #FF79DA;
-    transform: opacity(1);
   }
 }
 .Restaurants input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart, .page1_content input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart {
   animation: fill-heart 2s forwards;
+}
+
+/* Défini les keyframes pour leur donner une valeur de départ et une valeur d'arrivée */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0; /* pour que le tout soit invisible au départ */ /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois */
+  animation: fadeIn ease-in 1; /* permet d'être sûr que l'opacité va rester sur sa valeur finale : 1 */
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  animation-delay: 0.7s;
+}
+
+.fade-in.two {
+  animation-delay: 1.7s;
+}
+
+.fade-in.three {
+  animation-delay: 2.6s;
 }
 
 .intro {
@@ -703,6 +713,7 @@ footer a {
 .header_logo_page1 a {
   position: absolute;
   left: 23px;
+  color: black;
 }
 
 .page1_img img {
@@ -798,7 +809,8 @@ footer a {
   align-items: center;
   text-align: center;
   background-color: #F7F7F7;
-  padding: 2em 3em 1em 3em;
+  margin-top: 22px;
+  padding: 1em 3em 1em 3em;
 }
 .page1_content .commandbtn a {
   display: flex;

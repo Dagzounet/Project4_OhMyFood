@@ -20,34 +20,71 @@
   
   /* Animation pour remplir le coeur */
   @keyframes fill-heart {
-    0% {
-      -webkit-text-fill-color: transparent;
-      opacity: 0.2;
+    100% {
+      opacity: 0.8;
       background: linear-gradient(#FF79DA, #9356DC);
       background-clip: text;
       -webkit-background-clip: text;
-      color: transparent;
       transition: all 800ms;
     }
-    25% {
-      -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-      transform: opacity(0.2);
-    }
-    50% {
-      -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-      transform: opacity(0.6);
-    }
-    75% {
-      -webkit-text-fill-color: linear-gradient(#FF79DA, #9356DC);
-      transform: opacity(0.8);
-    }
-    100% {
-      -webkit-text-fill-color: #FF79DA;
-      transform: opacity(1);
-  }
 }
   /* Animation lorsque la checkbox est cochée */
   input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
     animation: fill-heart 2s forwards;
 }
 }
+
+
+
+// -----------------------------------------------------------------------------
+// Animation du site web
+
+
+/* Défini les keyframes pour leur donner une valeur de départ et une valeur d'arrivée */
+
+@-webkit-keyframes fadeIn { 
+  0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes fadeIn { 
+  0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes fadeIn { 
+   0%   { opacity: 0; }
+    100% { opacity: 1; } 
+  }
+  
+
+  .fade-in {
+    opacity:0;  /* pour que le tout soit invisible au départ */
+    -webkit-animation:fadeIn ease-in 1;  /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;  /* permet d'être sûr que l'opacité va rester sur sa valeur finale : 1 */
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+  }
+  
+  .fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  }
+  
+  .fade-in.two {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay:1.7s;
+  animation-delay: 1.7s; 
+  }
+  
+  .fade-in.three {
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+  }
