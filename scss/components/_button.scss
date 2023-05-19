@@ -27,6 +27,7 @@
   input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
     animation: fill-heart 2s forwards;
     background: linear-gradient(#FF79DA, #9356DC);
+    color:transparent;
     background-clip: text;
     -webkit-background-clip: text;
 }
