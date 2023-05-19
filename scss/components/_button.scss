@@ -20,21 +20,21 @@
   
   /* Animation pour remplir le coeur */
   @keyframes fill-heart {
-    100% {
-      opacity: 0.8;
-      background: linear-gradient(#FF79DA, #9356DC);
-      background-clip: text;
-      -webkit-background-clip: text;
-      transition: all 800ms;
-    }
+    0%   { opacity: 0.2; }
+    100% { opacity: 1; }
 }
   /* Animation lorsque la checkbox est cochée */
   input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
     animation: fill-heart 2s forwards;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 }
 
 
+// -----------------------------------------------------------------------------
+// Animation coche de validation des plats du site web
 
 .check_container {
   display: flex;
@@ -45,7 +45,7 @@
     height: 76px;
     transition: left 0.5s ease-in; /* effet d'animation sur la transition left */
 }
-.page1_card p{
+.page1_card p {
   /* Fonction ellipsis */
   white-space: nowrap;
   overflow: hidden;
@@ -80,20 +80,13 @@
 .page1_card:hover .check_container {
   left:17px;
 }
+
 // -----------------------------------------------------------------------------
-// Animation du site web
+// Animation effet d'apparition progressive du site web
 
 
 /* Défini les keyframes pour leur donner une valeur de départ et une valeur d'arrivée */
 
-@-webkit-keyframes fadeIn { 
-  0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  @-moz-keyframes fadeIn { 
-  0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
   @keyframes fadeIn { 
    0%   { opacity: 0; }
     100% { opacity: 1; } 
@@ -102,33 +95,17 @@
 
   .fade-in {
     opacity:0;  /* pour que le tout soit invisible au départ */
-    -webkit-animation:fadeIn ease-in 1;  /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-  
-    -webkit-animation-fill-mode:forwards;  /* permet d'être sûr que l'opacité va rester sur sa valeur finale : 1 */
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-  
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+    animation: fadeIn 1s ease-in forwards; /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois, le forward assure l'opacité finale */
   }
   
   .fade-in.one {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
   }
   
   .fade-in.two {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay:1.7s;
   animation-delay: 1.7s; 
   }
   
   .fade-in.three {
-  -webkit-animation-delay: 2.6s;
-  -moz-animation-delay: 2.6s;
   animation-delay: 2.6s;
   }

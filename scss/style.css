@@ -434,16 +434,18 @@ footer a {
   -webkit-text-stroke: thin;
 }
 @keyframes fill-heart {
+  0% {
+    opacity: 0.2;
+  }
   100% {
-    opacity: 0.8;
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: all 800ms;
+    opacity: 1;
   }
 }
 .Restaurants input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart, .page1_content input[id^=heart-checkbox]:checked ~ label[for^=heart-checkbox] .fa-heart {
   animation: fill-heart 2s forwards;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .check_container {
@@ -502,10 +504,8 @@ footer a {
   }
 }
 .fade-in {
-  opacity: 0; /* pour que le tout soit invisible au départ */ /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois */
-  animation: fadeIn ease-in 1; /* permet d'être sûr que l'opacité va rester sur sa valeur finale : 1 */
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
+  opacity: 0; /* pour que le tout soit invisible au départ */
+  animation: fadeIn 1s ease-in forwards; /* utilisation du fadeIn ci-dessus, avec un "ease-in" répété 1 seule fois, le forward assure l'opacité finale */
 }
 
 .fade-in.one {
