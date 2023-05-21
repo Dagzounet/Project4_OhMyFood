@@ -20,8 +20,12 @@
   
   /* Animation pour remplir le coeur */
   @keyframes fill-heart {
-    0%   { opacity: 0.2; }
-    100% { opacity: 1; }
+    0%   {
+       opacity: 0.2; 
+      }
+    100% {
+       opacity: 1; 
+      }
 }
   /* Animation lorsque la checkbox est cochée */
   input[id^="heart-checkbox"]:checked ~ label[for^="heart-checkbox"] .fa-heart {
@@ -89,8 +93,12 @@
 /* Défini les keyframes pour leur donner une valeur de départ et une valeur d'arrivée */
 
   @keyframes fadeIn { 
-   0%   { opacity: 0; }
-    100% { opacity: 1; } 
+   0%   {
+     opacity: 0; 
+    }
+    100% {
+       opacity: 1; 
+      } 
   }
   
 
@@ -110,3 +118,91 @@
   .fade-in.three {
   animation-delay: 2.6s;
   }
+
+  // -----------------------------------------------------------------------------
+// Animation effet Loader bouncing et fade out du vin
+
+  .loader_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: Loader_FadeOut 3.5s linear forwards;
+  }
+  
+  .loader {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 40px;
+    transform: translate(-50%, -50%);
+    width: 268px;
+    height: 144px;
+  }
+
+  // déclaration des propriété d'animation pour les verres de vin
+
+@keyframes fade-wine {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+// délai d'animation pour chaque verre de vin
+
+.fade-wine.one {
+  animation-delay: 0.1s;
+}
+
+.fade-wine.two {
+  animation-delay: 0.5s;
+}
+
+.fade-wine.three {
+  animation-delay: 0.7s;
+}
+
+// propriété du verre de vin + appel de l'animation ci-dessus avec délai, cubic bezier pour le bounce
+
+.fa-wine-glass {
+  font-size: 120px;
+  animation: fade-wine 2.2s cubic-bezier(0.5, 0, 1, 1) alternate infinite;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin;
+}
+  
+  // -----------------------------------------------------------------------------
+// Animation effet Loader disparition
+
+  @keyframes Loader_FadeOut {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  

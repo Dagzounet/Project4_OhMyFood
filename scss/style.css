@@ -521,6 +521,79 @@ footer a {
   animation-delay: 2.6s;
 }
 
+.loader_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: Loader_FadeOut 3.5s linear forwards;
+}
+
+.loader {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  gap: 40px;
+  transform: translate(-50%, -50%);
+  width: 268px;
+  height: 144px;
+}
+
+@keyframes fade-wine {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+.fade-wine.one {
+  animation-delay: 0.1s;
+}
+
+.fade-wine.two {
+  animation-delay: 0.5s;
+}
+
+.fade-wine.three {
+  animation-delay: 0.7s;
+}
+
+.fa-wine-glass {
+  font-size: 120px;
+  animation: fade-wine 2.2s cubic-bezier(0.5, 0, 1, 1) alternate infinite;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin;
+}
+
+@keyframes Loader_FadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 .intro {
   display: flex;
   flex-direction: column;
