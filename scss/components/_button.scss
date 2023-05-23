@@ -50,17 +50,22 @@
     height: 76px;
     transition: left 0.5s ease-in; /* effet d'animation sur la transition left */
 }
-.page1_card p {
+.page1_card p, h3 {
   /* Fonction ellipsis */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   /* largeur maxi avant déclenchement de l'ellipsis */
-  max-width: 88%;
+  max-width: 91%;
 }
 
 .page1_card:hover p {
-  /* largeur maxi avant déclenchement de l'ellipsis */
+  /* largeur maxi avant déclenchement de l'ellipsis texte */
+  max-width: 66%;
+}
+
+.page1_card:hover h3 {
+  /* largeur maxi avant déclenchement de l'ellipsis titre */
   max-width: 66%;
 }
 
